@@ -13,7 +13,7 @@ class Checkout extends Component {
     tel: "",
     telRight: false,
     address: "",
-    open: false
+    open: false,
   };
 
   onOpenModal = () => {
@@ -25,7 +25,7 @@ class Checkout extends Component {
     this.props.history.push("/menu");
   };
 
-  onInputChange = e => {
+  onInputChange = (e) => {
     if (e.target.name === "tel") {
       let phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
       if (e.target.value.match(phoneno)) {
@@ -43,20 +43,21 @@ class Checkout extends Component {
     }
   }
 
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
     const { firestore } = this.props;
     const { totalPrice, orders } = this.props.location.state;
     const { name, email, tel, address } = this.state;
 
     let date = new Date();
+    let str = "";
 
     const orderData = {
       totalPrice,
       orders,
       contact: { name, email, tel, address },
       orderTime: date.toUTCString(),
-      shipped: false
+      shipped: false,
     };
 
     firestore.add({ collection: "orders" }, orderData).then(() => {
@@ -79,7 +80,7 @@ class Checkout extends Component {
               title="Vasi podaci"
               additionStyle={{
                 color: "#333",
-                textShadow: "2px 2px 2px rgba(150, 150, 150, 1)"
+                textShadow: "2px 2px 2px rgba(150, 150, 150, 1)",
               }}
             >
               <form onSubmit={this.onSubmit}>
@@ -155,7 +156,7 @@ class Checkout extends Component {
               additionStyle={{
                 color: "#333",
                 textShadow: "2px 2px 2px rgba(150, 150, 150, 1)",
-                border: 0
+                border: 0,
               }}
             >
               <Orders checkout />
