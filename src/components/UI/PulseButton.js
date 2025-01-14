@@ -1,12 +1,13 @@
 import React from "react";
 
-const PulseButton = props => {
+const PulseButton = (props) => {
   const { icon, color } = props;
   return (
     <div
       className={`btn-floating pulse ${color}`}
       style={{ margin: ".5rem", cursor: "context-menu" }}
     >
+      Plus
       <i className="material-icons">{icon}</i>
     </div>
   );
