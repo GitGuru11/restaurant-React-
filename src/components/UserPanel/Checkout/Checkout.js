@@ -50,7 +50,6 @@ class Checkout extends Component {
     const { name, email, tel, address } = this.state;
 
     let date = new Date();
-    let str = "";
 
     const orderData = {
       totalPrice,
