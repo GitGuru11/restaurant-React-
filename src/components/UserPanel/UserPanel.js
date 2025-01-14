@@ -16,7 +16,7 @@ const UserPanel = () => {
         height: "98vh",
         padding: ".1rem",
         margin: ".3rem",
-        backgroundColor: "#f7f7f7"
+        backgroundColor: "#f7f7f7",
       }}
     >
       <div className="col m5" style={{ height: "100%", overflowY: "auto" }}>
@@ -37,12 +37,13 @@ const UserPanel = () => {
           fntFamily="Haymaker"
           additionStyle={{
             color: "#333",
-            textShadow: "2px 2px 2px rgba(150, 150, 150, 1)"
+            textShadow: "2px 2px 2px rgba(150, 150, 150, 1)",
           }}
         >
           <BurgerBuilder />
         </MealWrapper>
       </div>
+      <div></div>
       <div className="col m3" style={{ height: "100%", overflowY: "auto" }}>
         <MealWrapper
           fntSize="2rem"
@@ -51,7 +52,7 @@ const UserPanel = () => {
           additionStyle={{
             color: "#333",
             textShadow: "2px 2px 2px rgba(150, 150, 150, 1)",
-            border: 0
+            border: 0,
           }}
         >
           <Orders />
