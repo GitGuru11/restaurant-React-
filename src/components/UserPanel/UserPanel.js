@@ -43,7 +43,6 @@ const UserPanel = () => {
           <BurgerBuilder />
         </MealWrapper>
       </div>
-      <div></div>
       <div className="col m3" style={{ height: "100%", overflowY: "auto" }}>
         <MealWrapper
           fntSize="2rem"
